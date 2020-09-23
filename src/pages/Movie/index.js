@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row } from '../../components/Grid';
 import Card from '../../components/Card';
 import { getMovieData } from '../../store/actions/starwarsAction';
+import Skeleton from 'react-loading-skeleton';
 
 const MoviePage = () => {
   const dispatch = useDispatch();
@@ -18,8 +19,29 @@ const MoviePage = () => {
     dispatch(getMovieData());
   }, []);
 
-  if (isFetching) {
-    return <p>Loading</p>;
+  if (isFetching || data.length == 0) {
+    const tempContent = Array.from({ length: 6 });
+    return (
+      <Layout>
+        <Row>
+          {tempContent.map((item, index) => {
+            return (
+              <Col key={index} lg='3' md='2' sm='1'>
+                <Card>
+                  <Skeleton />
+                  <hr />
+                  <Skeleton />
+                  <Skeleton />
+                  <Skeleton />
+                  <Skeleton />
+                  <Skeleton />
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
+      </Layout>
+    );
   }
 
   return (
