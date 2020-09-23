@@ -30,3 +30,5 @@ npm start
 - `components` : Folder to put shared reuseable components
 - `navigation`: Folder to put routing navigation
 - `pages` : Folder to put pages in this case Movie, Character, Detail Character Page
+- `store` : Folder to redux stuff
+- `style` : Folder to global style
