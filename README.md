@@ -2,9 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run
 
-clone this repo
+clone this repo <br />
+Then, run:
+```bash
 npm install
 npm start
+```
 
 ## Folder Structure
 
@@ -30,5 +33,5 @@ npm start
 - `components` : Folder to put shared reuseable components
 - `navigation`: Folder to put routing navigation
 - `pages` : Folder to put pages in this case Movie, Character, Detail Character Page
-- `store` : Folder to redux stuff
-- `style` : Folder to global style
+- `store` : Folder to put redux stuff
+- `style` : Folder to put global style
